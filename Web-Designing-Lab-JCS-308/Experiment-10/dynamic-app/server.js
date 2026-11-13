@@ -1,0 +1,1 @@
+import express from 'express';const app=express();app.use(express.json());app.get('/',(req,res)=>res.send('<h1>Dynamic app is live</h1><p>Express server is responding.</p>'));app.get('/health',(req,res)=>res.json({status:'ok',service:'cloud-dynamic-demo'}));const port=process.env.PORT||3000;app.listen(port,()=>console.log(`Server listening on ${port}`));
